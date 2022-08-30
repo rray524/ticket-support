@@ -1,4 +1,5 @@
 const express = require('express')
+const { errorHandler } = require('../middleware/errorHandler')
 const dotenv = require('dotenv').config()
 const PORT = process.env.PORT || 8000
 
@@ -10,6 +11,9 @@ app.use(express.urlencoded({ extended: false }))
 app.get('/api', (req, res) => {
     res.status(200).json({ message: 'Welcome to the support ticket systems' })
 })
+
+// error handler
+app.use(errorHandler)
 
 // Login/Register Routes
 app.use('/api/users', require('../routes/userRoutes'))
