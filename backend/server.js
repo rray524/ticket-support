@@ -17,10 +17,11 @@ app.get('/api', (req, res) => {
 // connectDB
 connectDB();
 
-// error handler
-app.use(errorHandler)
 
 // Login/Register Routes
 app.use('/api/users', require('../routes/userRoutes'))
+
+// error handler (NOTE: should be under Login/register routes)
+app.use(errorHandler)
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
