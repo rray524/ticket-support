@@ -1,6 +1,8 @@
 const express = require('express')
+require('colors')
 const { errorHandler } = require('../middleware/errorHandler')
 const dotenv = require('dotenv').config()
+const connectDB = require("../config/db")
 const PORT = process.env.PORT || 8000
 
 const app = express()
@@ -11,6 +13,9 @@ app.use(express.urlencoded({ extended: false }))
 app.get('/api', (req, res) => {
     res.status(200).json({ message: 'Welcome to the support ticket systems' })
 })
+
+// connectDB
+connectDB();
 
 // error handler
 app.use(errorHandler)
