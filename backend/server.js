@@ -20,6 +20,7 @@ connectDB();
 
 // Login/Register Routes
 app.use('/api/users', require('../routes/userRoutes'))
+app.use('/api/tickets', require('../routes/ticketRoutes'))
 
 // error handler (NOTE: should be under Login/register routes)
 app.use(errorHandler)
