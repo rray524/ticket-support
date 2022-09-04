@@ -19,8 +19,8 @@ connectDB();
 
 
 //  Routes
-app.use('/api/users', require('../routes/userRoutes'))
-app.use('/api/tickets', require('../routes/ticketRoutes'))
+app.use('https://damp-dusk-91671.herokuapp.com/api/users', require('../routes/userRoutes'))
+app.use('https://damp-dusk-91671.herokuapp.com/api/tickets', require('../routes/ticketRoutes'))
 
 // error handler (NOTE: should be under Login/register routes)
 app.use(errorHandler)
