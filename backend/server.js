@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 connectDB();
 
 
-// Login/Register Routes
+//  Routes
 app.use('/api/users', require('../routes/userRoutes'))
 app.use('/api/tickets', require('../routes/ticketRoutes'))
 
