@@ -96,12 +96,16 @@ const Ticket = () => {
                     <h3>Description of Issue</h3>
                     <p>{ticket.description}</p>
                 </div>
-                <h2>Notes</h2>
+
             </header>
             {ticket.status !== 'closed' && (
-                <button onClick={openModal} className='btn'>
-                    <FaPlus /> Add Note
-                </button>
+                <>
+                    <h2>Notes</h2>
+                    <button onClick={openModal} className='btn'>
+                        <FaPlus /> Add Note
+                    </button>
+                </>
+
             )}
 
             <Modal
@@ -140,6 +144,7 @@ const Ticket = () => {
                     Close Ticket
                 </button>
             )}
+            <br /><br />
         </div>
     );
 };
