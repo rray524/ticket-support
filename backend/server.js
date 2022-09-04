@@ -5,6 +5,16 @@ const dotenv = require('dotenv').config()
 const connectDB = require("../config/db")
 const PORT = process.env.PORT || 8000
 
+app.use(cors());
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Headers, *, Access-Control-Allow-Origin', 'Origin, X-Requested-with, Content_Type,Accept,Authorization', 'https://ticket-project-33507.web.app/');
+    if (req.method === 'OPTIONS') {
+        res.header('Access-Control-Allow-Methods', 'PUT,POST,PATCH,DELETE,GET');
+        return res.status(200).json({});
+    }
+    next();
+});
+
 const app = express()
 
 app.use(express.json())
