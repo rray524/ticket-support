@@ -4,7 +4,6 @@
   "description": "Ticket support system application built in node, react, mongodb",
   "main": "server.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
