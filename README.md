@@ -5,6 +5,8 @@
 [Live Demo](https://ticket-project-33507.web.app/).
 
 ![hexa tag](https://i.ibb.co/XD3PZtW/ticket.png)
+![hexa tag](https://i.ibb.co/VSsqC7b/Screenshot-1.png)
+![hexa tag](https://i.ibb.co/KG3d7cZ/Screenshot-2.png)
 
 
 <hr style="border:2px solid gray"> </hr>
