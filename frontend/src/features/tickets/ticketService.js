@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = 'https://damp-dusk-91671.herokuapp.com/api/tickets/'
+const API_URL = 'https://plum-angry-scallop.cyclic.app/api/tickets/'
 
 // Create new ticket
 const createTicket = async (ticketData, token) => {
