@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -44,6 +45,13 @@ const NewTicket = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Programming Hero Support - New Ticket page</title>
+        <meta
+          name="description"
+          content="we provide support to our loyal customers through this platform"
+        />
+      </Helmet>
       <BackButton url="/" />
       <section className="heading">
         <h1>Create New Ticket</h1>
@@ -68,11 +76,11 @@ const NewTicket = () => {
               value={product}
               onChange={(e) => setProduct(e.target.value)}
             >
-              <option value="default">Select from Dropdown</option>
-              <option value="iPhone">Login Problem</option>
-              <option value="Macbook Pro">Video not streaming</option>
-              <option value="iMac">Website is not loading</option>
-              <option value="iPad">Other</option>
+              <option value="Default">Choose Issues</option>
+              <option value="Login">Login Problem</option>
+              <option value="Video">Video not streaming</option>
+              <option value="Website">Website is not loading</option>
+              <option value="Other">Other</option>
             </select>
           </div>
           <div className="form-group">
