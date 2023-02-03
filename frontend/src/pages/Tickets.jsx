@@ -37,7 +37,7 @@ const Tickets = () => {
         />
       </Helmet>
       <h1>Tickets</h1>
-      <div className="tickets">
+      <div className="tickets" style={{ paddingBottom: "40px" }}>
         <div className="ticket-headings">
           <div>Date</div>
           <div>Issue</div>
