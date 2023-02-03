@@ -4,7 +4,6 @@ const API_URL = "https://plum-angry-scallop.cyclic.app/api/tickets/";
 
 // Create new ticket
 const createTicket = async (ticketData, token) => {
-  console.log(ticketData);
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -12,7 +11,6 @@ const createTicket = async (ticketData, token) => {
   };
 
   const response = await axios.post(API_URL, ticketData, config);
-  console.log(response);
 
   return response.data;
 };
